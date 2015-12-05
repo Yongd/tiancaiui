@@ -1,0 +1,116 @@
+.skill-title span,
+.skill-title h2{
+  color:#3185e7;
+}
+.skill-title h2{
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+.skill-title h5{
+  font-size: 0.9rem;
+  color: #666;
+}
+.tabs-list {
+  width: 540px;
+  margin:0 auto;
+}
+.tabs-list li{
+  list-style: none;
+  float: left;
+} 
+.tabs .tab-title > a:hover{
+  background-color: #eee;
+}
+.tabs-list .tab-title.active a{
+  background: #3185e7;
+  color:#fff;
+}
+.tabs-list .tab-title a
+{
+  width: 110px;
+  height: 45px;
+  line-height: 41px;
+  padding: 0;
+  border: 2px solid #3185e7;
+  margin-right: -2px;
+  background-color: #fff;
+  color:#3185e7;
+  font-size: 0.9rem;
+}
+.tabs-list li:first-child a
+{
+  -webkit-border-top-left-radius: 2px;
+          border-top-left-radius: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+          border-bottom-left-radius: 2px;
+}
+
+.tabs-list li:last-child a
+{
+  -webkit-border-top-right-radius: 2px;
+          border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+          border-bottom-right-radius: 2px;
+}
+
+@media (max-width: 767px)
+{
+  .tabs-list,
+  .tabs-list li,
+  .tabs-list .tab-title a{ 
+    width: 100%; 
+  }
+  .tabs-list li{
+    padding:0 1rem;
+  }
+  .tabs-list a { 
+    margin-bottom: -1px; 
+  }
+}
+.skills-list > div { margin-top: 30px; }
+.skills-list .meter{
+  width: 0;
+}
+.skills-list .progress span{
+  color:#fff;
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.2rem;
+}
+.checked-list li{
+  list-style: none;
+  font-size: 0.9rem;
+  line-height: 2.3rem;
+  color: #888888;
+}
+.checked-list span{
+    color: #3185e7;
+    font-size: 0.8rem;
+    padding-right: 1rem;
+}
+
+
+/*pjnumber list*/
+ .full-width-box.skills .fwb-bg .overlay{
+  opacity: .4;
+  filter: alpha(opacity=40);
+ }
+.pjnumber-list{
+  padding:50px 0;
+  color:#fff;
+}
+.pjnumber-list .mega{
+  margin-bottom: 1.2rem;
+}
+.pjnumber-list .fa{
+  font-size: 1.3rem;
+}
+.pjnumber-list .fa-calendar-o,
+.pjnumber-list .fa-envelope-o{
+  font-size: 1.2rem;
+}
+.pjnumber-list h1{
+  color: #fff;
+  margin:0;
+}

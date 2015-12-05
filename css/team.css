@@ -1,0 +1,281 @@
+
+.title-box {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: 40px;
+  position: relative;
+  border-color: rgba(255,255,255,.3);
+}
+.title-box:before{
+  background: #fff;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  margin: 0 0 -1px;
+  position: absolute;
+  width: 40px;
+}
+.title-box.text-center:before {
+  left: 50%;
+  margin-left: -20px;
+}
+.title-box .title {
+  color: #7f7f7f;
+  font-size: 18px;
+  margin: 0 0 12px 0;
+  padding: 14px 0 0;
+}
+.title-box h1.title,
+.title-box .h1.title {
+  font-size: 24px;
+}
+.title-box .title {
+  color: #fff;
+}
+.title-box .title span{
+  font-size: 0.9rem;
+}
+
+
+
+.employee-list{
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+.employee.rotation {
+  overflow: visible;
+}
+.employee {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0 40px;
+  min-width: 260px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+}
+.carousel .employee {
+  margin-top: 40px;
+}
+.employee .image {
+  background: #f2f2f2;
+  display: block;
+  line-height: 0;
+  margin: 0;
+}
+.employee .image > img {
+  width: 100%;
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+.employee .description {
+  background: #f2f2f2;
+  border-top-width: 1px;
+  color: #505050;
+  display: table;
+  font-size: 13px;
+  height: 72px;
+  line-height: 18px;
+  text-align: center;
+  width: 100%;
+}
+.employee .description .vertical {
+  display: table-cell;
+  height: 72px;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+.employee .name {
+  color: #1e1e1e;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  margin: 0 0 4px;
+}
+.employee .role {
+  font-size: 11px;
+}
+.employee .intro{
+  font-size: 0.8rem;
+  color:#fff;
+
+}
+.employee .employee-hover {
+  background: #65bb00;
+  background: rgba(101,187,0,.9);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  bottom: 0;
+  color: #7f7f7f;
+  display: none;
+  font-size: 12px;
+  line-height: 20px;
+  left: 15px;
+  padding: 16px 20px 90px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+}
+
+.employee .employee-hover .name {
+  color: #fff;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.4;
+  margin: 0 0 7px;
+}
+.employee .employee-hover .role {
+  line-height: 1;
+  margin: 0 0 24px;
+  color:#eee;
+}
+.employee .employee-hover .contact {
+  color: #fff;
+}
+.employee .employee-hover .image {
+  background: #f7f7f7;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  height: 60px;
+  float: right;
+  line-height: 0;
+  margin: 4px 0 0 5px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 60px;
+  z-index: 1;
+}
+.employee .employee-hover .social {
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+  text-align: center;
+}
+.rotation .employee-hover {
+  display: block;
+  height: inherit;
+  transform: rotateY(-180deg);
+  -webkit-transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateY(-180deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  -o-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  z-index: 13;
+}
+.rotation.hover .employee-hover {
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transition-delay: .2s;
+  -ms-transition-delay: .2s;
+  -o-transition-delay: .2s;
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transition-delay: .2s;
+  z-index: 46;
+}
+.employee .employee-hover .social .item {
+  background: #fff;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+.employee .employee-hover .social .item .sbtnf {
+  float: none;
+  margin: 0;
+  overflow: inherit;
+}
+.social .sbtnf {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    color: #fff;
+    display: block;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    margin: 0 10px 0 0;
+    opacity: .35;
+    filter: alpha(opacity=35);
+    -webkit-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+    text-align: center;
+    width: 40px;
+    font-size: 0.85rem;
+}
+.social .sbtnf:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+.employee-hover .social .fa-weibo{
+  background-color: #fa7d3c;
+}
+.employee-hover .social .fa-qq{
+  background-color: #3e96d6;
+}
+.employee-hover .social .fa-twitter{
+  background-color: #0084b4;
+}
+.employee-hover .social .fa-facebook{
+  background-color: #3a5795;
+}
+
+
+.rotation {
+  background: none;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  perspective: 600px;
+}
+.rotation .default {
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: rotateX(0deg) rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-transform: rotateX(0deg) rotateY(0deg);
+  -moz-transform-style: preserve-3d;
+  -moz-backface-visibility: hidden;
+  transform: rotateY(0deg);
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  z-index: 24;
+}
+.rotation .default {
+  background: #f7f7f7;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.rotation.hover .default{
+  z-index: 35;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-transition-delay: .2s;
+  -moz-transition-delay: .2s;
+  transition-delay: .2s;
+}
