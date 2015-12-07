@@ -4,24 +4,20 @@
 		<em class="text-uppercase inline-block">我们的客户</em>
 	</div>
 	<div class="row clients-list text-center">
-		<div class="medium-2 columns wow fadeInUp animated" data-wow-delay="0s">
-			<a href="http://envato.com" rel="nofollow" style="background-image: url(http://127.0.0.1/wp-content/themes/reverie-master/img/clients/02.png)"></a>
-		</div>
-		<div class="medium-2 columns wow fadeInUp animated" data-wow-delay="0.3s">
-			<a href="http://envato.com" rel="nofollow" style="background-image: url(http://127.0.0.1/wp-content/themes/reverie-master/img/clients/02.png)"></a>
-		</div>
-		<div class="medium-2 columns wow fadeInUp animated" data-wow-delay="0.6s">
-			<a href="http://envato.com" rel="nofollow" style="background-image: url(http://127.0.0.1/wp-content/themes/reverie-master/img/clients/02.png)"></a>
-		</div>
-		<div class="medium-2 columns wow fadeInUp animated" data-wow-delay="0.9s">
-			<a href="http://envato.com" rel="nofollow" style="background-image: url(http://127.0.0.1/wp-content/themes/reverie-master/img/clients/02.png)"></a>
-		</div>
-		<div class="medium-2 columns wow fadeInUp animated" data-wow-delay="1.2s">
-			<a href="http://envato.com" rel="nofollow" style="background-image: url(http://127.0.0.1/wp-content/themes/reverie-master/img/clients/02.png)"></a>
-		</div>
-		<div class="medium-2 columns wow fadeInUp animated" data-wow-delay="1.5s">
-			<a href="http://envato.com" rel="nofollow" style="background-image: url(http://127.0.0.1/wp-content/themes/reverie-master/img/clients/02.png)"></a>
-		</div>
+    <?php
+        $clients = get_bookmarks( array(
+        'orderby' => 'id',
+        'order' => 'ASC',
+        'limit' => 6));
+         $i = 0;
+        foreach ($clients as $client){
+            echo'
+                <div class="medium-2 columns wow fadeInUp animated" data-wow-delay="'.$i*0.3.'s">
+                    <a href="'.$client->link_url.'" rel="nofollow" title="'.$client->link_name.'" style="background-image: url('.$client->link_image.')"></a>
+                </div>';
+            $i++;
+        }
+    ?>
 	</div>
 </div>
 <div class="row push-top-40 be-our-client">

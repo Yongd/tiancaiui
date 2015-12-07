@@ -12,13 +12,8 @@
     <div id="tc_page_preloader">
 		<span class="tc_preloader_icon"></span>
 	</div>
-
-<?php if ( is_home() ) { ?> 
-<header id="header" class="contain-to-grid">
-<?php } else { ?>
-<header id="header" class="contain-to-grid ">
-<?php } end ?>	
-	<!-- Starting the Top-Bar -->
+<header class="contain-to-grid">
+    <!-- Starting the Top-Bar -->
 	<nav class="top-bar" data-topbar>
 	    <ul class="title-area">
 	        <li class="name">

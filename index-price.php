@@ -5,7 +5,7 @@
     			<h4>About Prices</h4>
 				<em class="text-uppercase inline-block">关于价格</em>
     		</div>
-    		<div id="price" class="price-carousel push-top-50 wow fadeInRight animated" data-wow-delay="0.6s">
+    		<div id="price" class="price-carousel push-top-40 wow fadeInRight animated" data-wow-delay="0.6s">
 				<div class="item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-blue">

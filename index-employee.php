@@ -14,7 +14,7 @@
 		$users = get_users( 'role=administrator&order=DESC' );
 		$count = 1;
 		foreach ( $users as $user ) { $user_id = $user->id; $action = $count>2 ? 'bounceInRight' : 'bounceInLeft'; ?>
-			<div class="medium-3 columns employee rotation wow <?php echo $action; ?> animated"  data-wow-delay="0.6ws">
+			<div class="medium-3 columns employee rotation wow <?php echo $action; ?> animated"  data-wow-delay="0.6s">
 				<div class="default">
 					<div class="image">
 						<img src="<?php echo get_user_meta( $user_id, 'picture', true ); ?>" width="270" height="270" alt="">
@@ -43,7 +43,7 @@
 							</p>
 						</div>
 						<div class="contact">
-							<b>Email: </b><?php echo get_user_meta( $user_id, 'email', true ); ?>
+							<b>Email: </b><?php echo get_the_author_meta(  'user_email',$user_id ); ?>
 						</div>
 						<div class="contact">
 							<b>Phone: </b><?php echo get_user_meta( $user_id, 'tel', true ); ?>
@@ -56,12 +56,16 @@
 						<div class="item">
 							<a class="sbtnf fa fa-qq" href="<?php echo get_user_meta( $user_id, 'qq', true ); ?>" target="_blank"></a>
 						</div>
+						<?php if(get_user_meta( $user_id, 'twitter', true )) :?>
 						<div class="item">
 							<a class="sbtnf fa fa-twitter" href="<?php echo get_user_meta( $user_id, 'twitter', true ); ?>" target="_blank"></a>
 						</div>
+						<?php endif; ?>
+						<?php if(get_user_meta( $user_id, 'facebook', true )) :?>
 						<div class="item">
 							<a class="sbtnf fa fa-facebook" href="<?php echo get_user_meta( $user_id, 'facebook', true ); ?>" target="_blank"></a>
 						</div>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>

@@ -1,9 +1,9 @@
 	<div class="row blog-list push-top-70">
 		<div class="column">
-			<h3 class="dot-head wow fadeInDown animated" data-wow-delay="0.3s">
+			<h3 class="dot-head wow fadeInDown animated" data-wow-delay="0.6s">
 				<span>Latest Posts</span>
 			</h3>
-			<div class="posts-carousel-holder wow fadeInUp animated" data-wow-delay="0.3s">
+			<div class="posts-carousel-holder wow fadeInUp animated" data-wow-delay="0.6s">
 				<div id="blog" class="owl-carousel owl-theme owl-loaded">
 					<?php query_posts('cat=33&showposts=8'); ?>
 					<?php while (have_posts()) : the_post(); ?>

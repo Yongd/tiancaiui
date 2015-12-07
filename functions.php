@@ -118,6 +118,8 @@ function employee( $contactmethods ) {
     unset( $contactmethods['jabber'] );
     return $contactmethods;
 }
+//add linkmanager
+add_filter('pre_option_link_manager_enabled','__return_true');
 //remove emoji
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );

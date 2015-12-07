@@ -6,60 +6,13 @@
 	//background paralax
 	paralax();
 
-    //
-	////nav fixed auto
-	//$element_fixed = function() {
-     //   var st = $(document).scrollTop();
-     //   (st > 30)? $('.contain-to-grid').addClass('onscroll'): $('.contain-to-grid').removeClass('onscroll');
-     //   (st > 80)? $('.project').addClass('fixed'): $('.project').removeClass('fixed');
-    //
-    //};
-    //if( $(document).scrollTop()>30  ){
-    	//	$('.contain-to-grid').addClass('onscroll');
-    	//	$(window).bind("scroll", $element_fixed);
-    	//}else{
-     //  		$(window).bind("scroll", $element_fixed);
-   	//}
-    //
-	////case isotope & tab active
-    //
-    //
-
-
-
-
-
-
-	//fix
-	var fix = {
-		init : function(){
-			var self = this;
-			$(window).bind("scroll", self.onscroll);
-		},
-		onscroll : function(){
-			( this.scrollY > 30 )? $('#header').addClass('onscroll'): $('#header').removeClass('onscroll');
-			( $('#project').tc_doesExist() && this.scrollY > 80 )?  $('#project').addClass('fixed'): $('#project').removeClass('fixed');
-		}
-	};
-
-
-
-	fix.init();
-
-
-
-
-
-
-
-
-
 
 })(jQuery);
 
 
 jQuery(document).ready(function($) {
-
+	fixed($("header"),30,'onscroll');
+	fixed($("#project"),80,'fixed');
 	//preloader
 	if ($('#tc_page_preloader').tc_doesExist()) {
 		$(window).load(function() {
@@ -156,7 +109,8 @@ jQuery(document).ready(function($) {
 	if ($("#price").tc_doesExist()) {
 		$("#price").owlCarousel({
 			'items':4,
-			'margin':26
+			'margin':26,
+			'dots':true
 		});
 	}
 	//case-info picture popup
@@ -193,13 +147,11 @@ jQuery(window).load(function() {
 });
 //element fixed
 function fixed(e,t,c){
-	( $(document).scrollTop()>t ) ? e.addClass(c) :'';
+	( jQuery(document).scrollTop()>t ) ? e.addClass(c) :'';
 	jQuery(window).bind("scroll", function(){
-		( this.scrollY > t ) ? e.addClass(c) : e.removeClass(c);
+		( e.tc_doesExist() && this.scrollY > t ) ? e.addClass(c) : e.removeClass(c);
 	});
 }
-
-
 //background paralax
 function paralax() {
 	var speed   = 2;

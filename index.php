@@ -7,7 +7,7 @@
 	<a name="services"></a>
 	<div class="full-width-box service">
 		<div class="row">
-			<div class="small-4 large-4 columns wow fadeInDown animated" data-wow-delay="0.3s">
+			<div class="small-4 large-4 columns wow fadeInDown animated" data-wow-delay="0.6s">
 				<div class="top_icon_box color1 text-center boc_animate_when_almost_visible boc_start_animation">
 					<div class="icon_holder">
 						<div class="icon_bgr"></div>
@@ -20,7 +20,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="small-4 large-4 columns wow fadeInDown animated" data-wow-delay="0.6s">
+			<div class="small-4 large-4 columns wow fadeInDown animated" data-wow-delay="0.9s">
 				<div class="top_icon_box color2 text-center">
 					<div class="icon_holder">
 						<div class="icon_bgr"></div>
@@ -31,7 +31,7 @@
 					<p>Wordpress是当前世界上最流行的博客系统，我们熟悉wordpress环境，使用常见框架开发，编写主题带后台控制面板和SEO优化设置</p>
 				</div>
 			</div>
-			<div class="small-4 large-4 columns wow fadeInDown animated" data-wow-delay="0.9s">
+			<div class="small-4 large-4 columns wow fadeInDown animated" data-wow-delay="1.2s">
 				<div class="top_icon_box color3 text-center">
 					<div class="icon_holder">
 						<div class="icon_bgr"></div>
@@ -42,7 +42,7 @@
 					<p>为您的网站或店铺提供7*12小时的技术服务，在图片处理、网站建设和店铺装修、运营方面有什么技术方面的问题，我们可以为您解决</p>
 				</div>
 			</div>
-			<div class="small-4 large-4 columns wow fadeInUp animated" data-wow-delay="0.3s">
+			<div class="small-4 large-4 columns wow fadeInUp animated" data-wow-delay="0.6s">
 				<div class="top_icon_box color4 text-center">
 					<div class="icon_holder">
 						<div class="icon_bgr"></div>
@@ -50,10 +50,10 @@
 					</div>
 					<h3>模板定制</h3>
 					<h4>TEMPLATE CUSTOMIZATION</h4>
-					<p>根据要求和店铺产品进行设计和制作，提升店铺形象，让买家从视觉和心理上感觉到店主对店铺的用心，增加顾客在店铺的停留时间，提高浏览量</p>
+					<p>根据店铺产品进行设计和制作，提升店铺形象，通过视觉的展现赢得买家心理上的信任，增加买家在店铺的停留时间，提高成交率</p>
 				</div>
 			</div>
-			<div class="small-4 large-4 columns wow fadeInUp animated" data-wow-delay="0.6s">
+			<div class="small-4 large-4 columns wow fadeInUp animated" data-wow-delay="0.9s">
 				<div class="top_icon_box color5 text-center">
 					<div class="icon_holder">
 						<div class="icon_bgr"></div>
@@ -66,7 +66,7 @@
 					</p>
 				</div>
 			</div>
-			<div class="small-4 large-4 columns wow fadeInUp animated" data-wow-delay="0.9s">
+			<div class="small-4 large-4 columns wow fadeInUp animated" data-wow-delay="1.2s">
 				<div class="top_icon_box color6 text-center">
 					<div class="icon_holder">
 						<div class="icon_bgr"></div>

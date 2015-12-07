@@ -46,8 +46,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* $COMMON                                   */
 /* ========================================= */
 .container{
-    margin-bottom:440px;
-    z-index:1;
     position: relative;
     background-color:#ffffff;
     width:100%;
@@ -214,8 +212,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 .bg-red {
     background-color: #f04d4e;
+    color:#ffa902;
 }
+a{
+    color:#3185e7;
 
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
 /* ========================================= */
 /* $PRELOADER                                  */
 /* ========================================= */
@@ -498,6 +504,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ========================================= */
 /*  #SLIDER
 /* ======================= */
+.tp-caption a {
+    text-shadow:none;
+    -webkit-transition:all 0.2s ease-out;
+    -moz-transition:all 0.2s ease-out;
+    -o-transition:all 0.2s ease-out;
+    -ms-transition:all 0.2s ease-out;
+}
+
+.tp-caption a:hover {
+    color:#ffa902;
+}
 .tp-caption .slider-button,
 .tp-caption .slider-button:hover {
     color: #fff;
@@ -511,8 +528,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 .tp-caption .transparent-button:hover {
-    background-color: #008cba;
-    border-color: #008cba;
+    background-color: #3185e7;
+    border-color: #3185e7;
 }
 
 .hovered .tp-caption .tp-video-controls {
@@ -940,7 +957,7 @@ a:hover .pic_info .info_overlay p {
     top: 50%;
     font-size: 14px;
     line-height: 14px;
-    color: #8ab631;
+    color: #65bb00;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     background-color: #ffffff;
@@ -1015,7 +1032,7 @@ a:hover .pic_info .info_overlay p {
 }
 
 .current_portfolio_item {
-    background: #8ab631;
+    background: #65bb00;
     color: #fff
 }
 
@@ -1057,6 +1074,10 @@ a:hover .pic.img_hover_effect img {
     border-radius: 3px;
     padding: 0.6rem 2.6rem 0.6rem 2.2rem;
     font-size: 0.9rem;
+    background-color:#65bb00;
+}
+.morecase:hover{
+    background-color:#444444;
 }
 .morecase span{
     position: relative;
@@ -1459,27 +1480,22 @@ a:hover .pic.img_hover_effect img {
 .skill-title h2 {
     color: #3185e7;
 }
-
 .skill-title h2 {
     margin-bottom: 0;
     font-size: 2rem;
 }
-
 .skill-title h5 {
     font-size: 0.9rem;
     color: #666;
 }
-
 .tabs-list {
-    width: 540px;
+    width: 541px;
     margin: 0 auto;
 }
-
 .tabs-list li {
     list-style: none;
     float: left;
 }
-
 .tabs .tab-title > a:hover {
     background-color: #eee;
 }
@@ -1487,8 +1503,11 @@ a:hover .pic.img_hover_effect img {
 .tabs-list .tab-title.active a {
     background: #3185e7;
     color: #fff;
+    outline:none;
 }
-
+.tabs-list .tab-title a:focus{
+    outline:none;
+}
 .tabs-list .tab-title a {
     width: 110px;
     height: 45px;
@@ -1500,21 +1519,18 @@ a:hover .pic.img_hover_effect img {
     color: #3185e7;
     font-size: 0.9rem;
 }
-
 .tabs-list li:first-child a {
     -webkit-border-top-left-radius: 2px;
     border-top-left-radius: 2px;
     -webkit-border-bottom-left-radius: 2px;
     border-bottom-left-radius: 2px;
 }
-
 .tabs-list li:last-child a {
     -webkit-border-top-right-radius: 2px;
     border-top-right-radius: 2px;
     -webkit-border-bottom-right-radius: 2px;
     border-bottom-right-radius: 2px;
 }
-
 @media (max-width: 767px) {
     .tabs-list,
     .tabs-list li,
@@ -1530,11 +1546,9 @@ a:hover .pic.img_hover_effect img {
         margin-bottom: -1px;
     }
 }
-
 .skills-list > div {
     margin-top: 30px;
 }
-
 .skills-list .meter {
     width: 0;
 }
@@ -1546,7 +1560,6 @@ a:hover .pic.img_hover_effect img {
     font-weight: bold;
     line-height: 1.2rem;
 }
-
 .checked-list li {
     list-style: none;
     font-size: 0.9rem;
@@ -1898,29 +1911,14 @@ a:hover .img_overlay {
 
 /*  #PRICE
 /* ======================= */
-.price-carousel .owl-item {
-    margin-top: 20px;
-    transition: all .2s ease-out;
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out;
-}
-
-.price-carousel .owl-item:hover {
-    margin-top: 10px;
-    transition: all .2s ease-out;
-    -webkit-transition: all .2s ease-out;
-    -moz-transition: all .2s ease-out;
-}
 
 .price-carousel .owl-stage-outer {
-    padding-bottom: 10px;
+    padding:10px 0;
 }
-
 .price-table {
     background-color: #f9f9f9;
-    padding: 4rem 0 5rem 0;
+    padding: 4rem 0;
 }
-
 .price-table .widget-title:before {
     display: none;
 }
@@ -2049,7 +2047,12 @@ a:hover .img_overlay {
     -webkit-transition: all .2s ease-out;
     -moz-transition: all .2s ease-out;
 }
-
+.button-2:hover:visited{
+    color: #3c3c3c;
+}
+.button-2:visited{
+    color: #fff;
+}
 .button-2:before {
     z-index: -1;
     backface-visibility: hidden;
@@ -2216,11 +2219,6 @@ a:hover .img_overlay {
 .footer {
     background-color: #111;
     color: #a6a6a6;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width:100%;
-    z-index: 0;
 }
 
 .footer .row:first-child {
