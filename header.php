@@ -2,9 +2,9 @@
 <!--[if IE 8]>    <html class="no-js ie8 oldie"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>">
-    <title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf8" />
     <meta name="viewport" content="width=device-width" />
+    <?php include('seo.php'); ?>
     <link rel="shortcut icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
     <?php wp_head(); ?>
 </head>

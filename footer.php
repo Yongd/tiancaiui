@@ -52,8 +52,24 @@
 	</div>
 	<div class="row">
 		<div class="large-12 columns">
-			<p class="copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php _e('Made with Love in','reverie'); ?> <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie</a>. 冀ICP备15002125-2号</p>
-		</div>
+			<div class="copyright">
+			    <p class="left">
+			        &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. <?php _e('Made with Love in','reverie'); ?> <a href="http://themefortress.com/reverie/" rel="nofollow" title="Reverie Framework">Reverie</a>. 冀ICP备15002125-2号
+                </p>
+                <p class="right">
+                    <a href="http://service.weibo.com/share/share.php?title=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计&url=http://www.tiancaiui.com"><i class="fa fa-weibo"></i></a>
+                    <a href="http://s.jiathis.com/?webid=weixin&uid=0&jtss=0&url=http://www.tiancaiui.com/&title=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计&isexit=false"><i class="fa fa-weixin"></i></a>
+                    <a href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.tiancaiui.com/&title=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计"><i class="fa fa-qq"></i></a>
+                    <a href="http://share.v.t.qq.com/index.php?c=share&a=index&url=http://www.tiancaiui.com/&title=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计"><i class="fa fa-tencent-weibo"></i></a>
+                    <a href="http://widget.renren.com/dialog/share?resourceUrl=http://www.tiancaiui.com/&title=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计"><i class="fa fa-renren"></i></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.tiancaiui.com/&t=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计"><i class="fa fa-facebook"></i></a>
+                    <a href="https://plus.google.com/share?url=http://www.tiancaiui.com&t=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计"><i class="fa fa-google-plus"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&ro=true&armin=armin&url=http://www.tiancaiui.com/&title=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://twitter.com/intent/tweet?text=天彩科技,专注高端UI、交互设计、用户体验、网站建设、电子商务设计http://www.tiancaiui.com/"><i class="fa fa-twitter"></i></a>
+                    <a href="http://digg.com/submit?partner=addthis&url=http://www.tiancaiui.com/&title=天彩科技 | 专注高端UI、交互设计、用户体验、网站建设、电子商务设计"><i class="fa fa-digg"></i></a>
+                </p>
+            </div>
+        </div>
 	</div>
 </footer>
 <?php wp_footer(); ?>

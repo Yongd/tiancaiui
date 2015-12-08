@@ -170,8 +170,8 @@ if( ! function_exists( 'reverie_scripts_and_styles ' ) ) {
 	    wp_enqueue_script( 'reverie-js' );
 	    wp_enqueue_script( 'wow' );
 	    wp_enqueue_script( 'html5shiv' );
+	    wp_enqueue_script( 'isotope' );
         if( is_home() ){
-            wp_enqueue_script( 'isotope' );
             wp_enqueue_script( 'waypoints' );
             wp_enqueue_script( 'countTo' );
             wp_enqueue_script( 'owl-carousel' );

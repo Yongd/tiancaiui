@@ -20,7 +20,8 @@ jQuery(document).ready(function($) {
 		});
 	}
 	if ($("#caseshow").tc_doesExist()) {
-		$("#caseshow").isotope();
+		var cate = $("#crumb .breadcrumbs .child-cate");
+		cate.tc_doesExist() ? $("#caseshow").isotope( {filter:cate.attr("data-option-value")} ) : $("#caseshow").isotope();
 		$(window).smartresize(function () {
 			setTimeout(function () {
 				$("#caseshow").isotope();
@@ -33,6 +34,7 @@ jQuery(document).ready(function($) {
 			});
 			$("#filter li div").removeClass("current_portfolio_item");
 			$(this).addClass("current_portfolio_item");
+			cate.tc_doesExist() ? cate.text($(this).text()):'';
 			return false;
 		});
 	}
@@ -137,6 +139,15 @@ jQuery(document).ready(function($) {
 			});
 		});
 	}
+	//back top
+	var $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
+			.attr("title", "返回顶部").click(function() {
+				$("html, body").animate({ scrollTop: 0 }, 280);
+			}), $backToTop = function() {
+		var st = $(document).scrollTop(), sh = $(window).height();
+		(st > sh) ? $backToTopEle.fadeIn(): $backToTopEle.fadeOut();
+	};
+	$(window).bind("scroll", $backToTop);
 });
 
 jQuery(window).load(function() {

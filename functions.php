@@ -54,8 +54,10 @@ foreach ($sidebars as $sidebar) {
 // return entry meta information for posts, used by multiple loops, you can override this function by defining them first in your child theme's functions.php file
 if ( ! function_exists( 'reverie_entry_meta' ) ) {
     function reverie_entry_meta() {
-        echo '<span class="byline author">'. __('Written by', 'reverie') .' <a href="'. get_author_posts_url(get_the_author_meta('ID')) .'" rel="author" class="fn">'. get_the_author() .', </a></span>';
-        echo '<time class="updated" datetime="'. get_the_time('c') .'" pubdate>'. get_the_time('F jS, Y') .'</time>';
+        echo '<span class="calendar_date"><i class="fa fa-calendar-check-o"></i>'.get_the_time('Y-m-d').'</span>';
+        echo '<span class="author"><i class="fa fa-user"></i>By '.get_the_author_link().' ?></span>';
+        echo '<span class="comments"><i class="fa fa-commenting-o"></i>'.comments_popup_link('No comments yet', '1 Comments','% Comments').'</span>';
+        echo '<span class="tags"><i class="fa fa-tag"></i>'.the_tags('').'?></span>';
     }
 };
 
@@ -102,7 +104,22 @@ function catch_that_image() {
     $first_img = $matches [1] [0];
     return $first_img;
 }
-
+//caseinfo cate nav
+function get_caseinfo_category($cat)
+{
+    $html='';
+    $child_cate_id = get_cat_ID($cat);
+    $parent_cate_id = get_category($child_cate_id)->category_parent;
+    if($parent_cate_id!=0){
+        $html = '<li><a href="'.get_category_link($parent_cate_id).'">作品展示</a></li><li data-option-value=".'.get_category($child_cate_id)->slug.'" class="current child-cate">'.$cat.'</li>';
+    }else{
+        $html = '<li class="current">作品展示</li>';
+    }
+    return $html;
+}
+function get_slug($cat){
+    return get_category(get_cat_ID($cat))->slug;
+}
 //employee info
 add_filter( 'user_contactmethods', 'employee' );
 function employee( $contactmethods ) {
@@ -120,6 +137,34 @@ function employee( $contactmethods ) {
 }
 //add linkmanager
 add_filter('pre_option_link_manager_enabled','__return_true');
+//speed avatar
+function fa_cache_avatar($avatar, $id_or_email, $size, $default, $alt)
+{
+    $avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com"), "cn.gravatar.com", $avatar);
+    $tmp = strpos($avatar, 'http');
+    $url = get_avatar_url( $id_or_email, $size ) ;
+    $url = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com"), "cn.gravatar.com", $url);
+    $avatar2x = get_avatar_url( $id_or_email, ( $size * 2 ) ) ;
+    $avatar2x = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com"), "cn.gravatar.com", $avatar2x);
+    $g = substr($avatar, $tmp, strpos($avatar, "'", $tmp) - $tmp);
+    $tmp = strpos($g, 'avatar/') + 7;
+    $f = substr($g, $tmp, strpos($g, "?", $tmp) - $tmp);
+    $w = home_url();
+    $e = ABSPATH .'avatar/'. $size . '*'. $f .'.jpg';
+    $e2x = ABSPATH .'avatar/'. ( $size * 2 ) . '*'. $f .'.jpg';
+    $t = 1209600;
+    if ( (!is_file($e) || (time() - filemtime($e)) > $t) && (!is_file($e2x) || (time() - filemtime($e2x)) > $t ) ) {
+        copy(htmlspecialchars_decode($g), $e);
+        copy(htmlspecialchars_decode($avatar2x), $e2x);
+    } else { $avatar = $w.'/avatar/'. $size . '*'.$f.'.jpg';
+        $avatar2x = $w.'/avatar/'. ( $size * 2) . '*'.$f.'.jpg';
+        if (filesize($e) < 1000) copy($w.'/avatar/default.jpg', $e);
+        if (filesize($e2x) < 1000) copy($w.'/avatar/default.jpg', $e2x);
+        $avatar = "<img alt='{$alt}' src='{$avatar}' srcset='{$avatar2x}' class='avatar avatar-{$size} photo' height='{$size}' width='{$size}' />";
+    }
+    return $avatar;
+}
+add_filter('get_avatar', 'fa_cache_avatar',1,5);
 //remove emoji
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
@@ -137,9 +182,5 @@ function my_function_admin_bar(){
     return false;
 }
 add_filter( 'show_admin_bar' , 'my_function_admin_bar');
-
-
-
-
 
 ?>

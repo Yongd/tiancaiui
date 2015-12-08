@@ -311,7 +311,7 @@ a{
         height: 80px;
     }
 
-    body:not(.home) .contain-to-grid {
+    .single .contain-to-grid {
         background-color: #fff;
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
         -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
@@ -340,7 +340,7 @@ a{
         background: none;
     }
 
-    body:not(.home) .top-bar .name h1 a {
+    .single .top-bar .name h1 a {
         background-position: 0 -46px;
     }
 
@@ -372,7 +372,7 @@ a{
         -o-transition: color 300ms ease-out;
     }
 
-    body:not(.home) .top-bar-section ul li a,
+    .single .top-bar-section ul li a,
     .onscroll .top-bar-section ul li a {
         color: #666;
     }
@@ -410,10 +410,10 @@ a{
         -o-transition: color 300ms ease-out;
     }
 
-    body:not(.home) .top-bar-section ul li.active > a,
-    body:not(.home) .top-bar-section ul li.active > a:hover,
-    body:not(.home) .top-bar-section ul li:hover > a,
-    body:not(.home) .top-bar-section li.active:not(.has-form) a:not(.button),
+    .single .top-bar-section ul li.active > a,
+    .single .top-bar-section ul li.active > a:hover,
+    .single .top-bar-section ul li:hover > a,
+    .single .top-bar-section li.active:not(.has-form) a:not(.button),
     .onscroll .top-bar-section ul li.active > a,
     .onscroll .top-bar-section ul li.active > a:hover,
     .onscroll .top-bar-section ul li:hover > a,
@@ -460,7 +460,7 @@ a{
         margin-top: -2px;
     }
 
-    body:not(.home) .top-bar-section .has-dropdown > a:after,
+    .single .top-bar-section .has-dropdown > a:after,
     .onscroll .top-bar-section .has-dropdown > a:after {
         border-top-color: rgba(0, 0, 0, 0.4);
     }
@@ -1036,9 +1036,7 @@ a:hover .pic_info .info_overlay p {
     background: #65bb00;
     color: #fff
 }
-.category .case{
-    margin-bottom: 4rem;
-}
+
 .case .pic.img_hover_effect {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1105,9 +1103,6 @@ a:hover .pic.img_hover_effect img {
     left:50px;
     opacity: 0;
     filter: alpha(opacity=0);
-}
-.category .morecase{
-    display: none;
 }
 @media only screen and (min-width: 769px) and (max-width: 1017px) {
     .grid_holder .col.span_1_of_3 {
@@ -2402,14 +2397,10 @@ a:hover .img_overlay {
     padding-top: 90px;
     background-color: #fafafa;
     border-bottom: 1px #eeeeee solid;
-    position: relative;
-    z-index:1;
 }
 
 .crumb h1 {
     font-size: 1.75rem;
-    height:40px;
-    overflow: hidden;
 }
 
 .breadcrumbs {
