@@ -39,27 +39,7 @@ require_once('lib/presstrends.php'); // load PressTrends to track the usage of R
 
 
 
-// create widget areas: sidebar
-$sidebars = array('Sidebar');
-foreach ($sidebars as $sidebar) {
-    register_sidebar(array('name'=> $sidebar,
-    	'id' => 'Sidebar',
-        'before_widget' => '<article id="%1$s" class="panel widget %2$s">',
-        'after_widget' => '</article>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>'
-    ));
-}
 
-// return entry meta information for posts, used by multiple loops, you can override this function by defining them first in your child theme's functions.php file
-if ( ! function_exists( 'reverie_entry_meta' ) ) {
-    function reverie_entry_meta() {
-        echo '<span class="calendar_date"><i class="fa fa-calendar-check-o"></i>'.get_the_time('Y-m-d').'</span>';
-        echo '<span class="author"><i class="fa fa-user"></i>By '.get_the_author_link().' ?></span>';
-        echo '<span class="comments"><i class="fa fa-commenting-o"></i>'.comments_popup_link('No comments yet', '1 Comments','% Comments').'</span>';
-        echo '<span class="tags"><i class="fa fa-tag"></i>'.the_tags('').'?></span>';
-    }
-};
 
 /*case-show*/
 function get_project_tags( $tags, $type ){
@@ -134,6 +114,19 @@ function employee( $contactmethods ) {
     unset( $contactmethods['aim'] );
     unset( $contactmethods['jabber'] );
     return $contactmethods;
+}
+
+
+// create widget areas: sidebar
+$sidebars = array('Sidebar');
+foreach ($sidebars as $sidebar) {
+    register_sidebar(array('name'=> $sidebar,
+    	'id' => 'Sidebar',
+        'before_widget' => '<article id="%1$s" class="widget %2$s">',
+        'after_widget' => '</article>',
+        'before_title' => '<h4><span>',
+        'after_title' => '</span></h4>'
+    ));
 }
 //add linkmanager
 add_filter('pre_option_link_manager_enabled','__return_true');

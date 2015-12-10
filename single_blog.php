@@ -13,8 +13,8 @@
   		</div>
 	</div>
 </div>
-<div class="row">
-    <div class="small-12 large-8 columns" id="content" role="main">
+<div class="row post-content">
+    <div class="small-12 large-9 columns" id="content" role="main">
         <?php while (have_posts()) : the_post(); ?>
             <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
                 <div class="entry-content">
@@ -22,9 +22,9 @@
                 </div>
                 <p class="post_meta">
                      <span class="calendar_date"><i class="fa fa-calendar-check-o"></i><?php the_time('Y-m-d'); ?></span>
-                     <span class="author"><i class="fa fa-user"></i>By <?php the_author_link(); ?></span>
-                     <span class="comments"><i class="fa fa-commenting-o"></i><?php comments_popup_link('No comments yet', '1 Comments','% Comments'); ?></span>
-                     <span class="tags"><i class="fa fa-tag"></i><?php the_tags(''); ?></span>'
+                     <span class="author"><i class="fa fa-user"></i>By <?php the_author_posts_link(); ?></span>
+                     <span class="comments"><i class="fa fa-commenting-o"></i><?php comments_popup_link('No comments', '1 Comments','% Comments'); ?></span>
+                     <span class="tags"><i class="fa fa-tag"></i><?php the_tags(''); ?></span>
                 </p>
             </article>
             <div class="entry-author panel">

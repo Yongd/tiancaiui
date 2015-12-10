@@ -1,6 +1,6 @@
     <div class="full-width-box case">
 		<div class="row">
-			<div class="column wow fadeInDown animated" data-wow-delay="0.8s">
+			<div class="large-12 columns wow fadeInDown animated" data-wow-delay="<?php echo $delay;?>s">
 				<div class="case-title text-center" style="display:none;">
 					<h3>最近作品</h3>
 				</div>
@@ -26,7 +26,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="column wow fadeInUp animated" data-wow-delay="0.8s">
+			<div class="large-12 columns wow fadeInUp animated" data-wow-delay="<?php echo $delay;?>s">
 				<div id="caseshow" class="grid_holder animated_items no_spacing" style="position: relative; height: 799px;">
                     <?php query_posts('cat=3&showposts='.$number); ?>
 					<?php while (have_posts()) : the_post(); ?>

@@ -5,7 +5,7 @@
 		</div>
 	</div>
 	<?php include("index-services.php"); ?>
-    <?php $number = 9 ; include("index-case.php"); ?>
+    <?php $number = 9; $delay = 0.8; include("index-case.php"); ?>
 	<?php include("index-employ.php"); ?>
 	<?php include("index-skills.php"); ?>
 	<?php include("index-blog.php"); ?>

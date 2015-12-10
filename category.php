@@ -14,10 +14,5 @@
   		</div>
 	</div>
 </div>
-
-
-
-<?php $number = 15 ; $slug = get_slug(single_cat_title('',false)); include("index-case.php"); ?>
-
-
+<?php $number = 15 ; $delay = 0; $slug = get_slug(single_cat_title('',false)); include("index-case.php"); ?>
 <?php get_footer(); ?>
