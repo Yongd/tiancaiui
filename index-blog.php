@@ -16,7 +16,7 @@
 								</div>
 								<div class="post-item-desc">
 									<h4><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h4>
-									<div class="post-date"><span class="fa fa-calendar"></span> &nbsp; <?php echo date('F',get_the_time('U')); the_time(' d, Y'); ?></div>
+									<div class="post-date"><span class="fa fa-calendar"></span> &nbsp; <?php echo get_the_date(); ?></div>
 									<p><?php echo mb_strimwidth(strip_tags($post->post_content),0,82,'...'); ?></p>
 									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="more-link">Read more</a>		
 								</div>

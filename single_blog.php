@@ -17,31 +17,34 @@
     <div class="small-12 large-9 columns" id="content" role="main">
         <?php while (have_posts()) : the_post(); ?>
             <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-                <div class="entry-content">
-                    <?php the_content(); ?>
-                </div>
                 <p class="post_meta">
                      <span class="calendar_date"><i class="fa fa-calendar-check-o"></i><?php the_time('Y-m-d'); ?></span>
                      <span class="author"><i class="fa fa-user"></i>By <?php the_author_posts_link(); ?></span>
                      <span class="comments"><i class="fa fa-commenting-o"></i><?php comments_popup_link('No comments', '1 Comments','% Comments'); ?></span>
                      <span class="tags"><i class="fa fa-tag"></i><?php the_tags(''); ?></span>
                 </p>
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                </div>
+
             </article>
             <div class="entry-author panel">
                 <div class="row">
-                    <div class="large-3 columns">
+                    <div class="large-2 columns">
                         <?php echo get_avatar( get_the_author_meta('user_email'), 95 ); ?>
                     </div>
-                    <div class="large-9 columns">
+                    <div class="large-9 pull-1 columns">
                         <h4><?php the_author_posts_link(); ?></h4>
                         <p class="cover-description"><?php the_author_meta('description'); ?></p>
                     </div>
                 </div>
             </div>
-            <?php comments_template(); ?>
-        <?php endwhile; // End the loop ?>
-
-	</div>
+            <div class="comments push-top-40 push-bottom-80">
+                <h3>参与评论</h3>
+                <?php comments_template(); ?>
+            </div>
+        <?php endwhile; ?>
+    </div>
 	<?php get_sidebar(); ?>
 </div>		
 <?php get_footer(); ?>
