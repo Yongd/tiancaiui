@@ -85,15 +85,15 @@ function catch_that_image() {
     return $first_img;
 }
 //caseinfo cate nav
-function get_caseinfo_category($cat)
+function get_nav_category($cat)
 {
     $html='';
     $child_cate_id = get_cat_ID($cat);
     $parent_cate_id = get_category($child_cate_id)->category_parent;
     if($parent_cate_id!=0){
-        $html = '<li><a href="'.get_category_link($parent_cate_id).'">作品展示</a></li><li data-option-value=".'.get_category($child_cate_id)->slug.'" class="current child-cate">'.$cat.'</li>';
+        $html = '<li><a href="'.get_category_link($parent_cate_id).'">'.get_category($parent_cate_id)->name.'</a></li><li data-option-value=".'.get_category($child_cate_id)->slug.'" class="current child-cate">'.$cat.'</li>';
     }else{
-        $html = '<li class="current">作品展示</li>';
+        $html = '<li class="current">'.$cat.'</li>';
     }
     return $html;
 }
@@ -175,5 +175,96 @@ function my_function_admin_bar(){
     return false;
 }
 add_filter( 'show_admin_bar' , 'my_function_admin_bar');
+
+class widget_client_say extends WP_Widget{
+    function __construct(){
+        $this->WP_Widget( 'client_say', __( '客户评价', 'Bing' ), array( 'description' => __( '客户评价展示', 'Bing' ) ) );
+    }
+    function widget( $args, $instance ){
+        extract( $args, EXTR_SKIP );
+        //添加小工具标题过滤器
+        $title = apply_filters( 'widget_name', $instance['title'] );
+        echo $before_widget;
+            echo $before_title . $title . $after_title;
+            echo'<div id="client-say" class="owl-carousel owl-theme owl-loaded">';
+            for($i=1;$i<4;$i++){
+                echo'
+                <div class="owl-item">
+                    <div class="quote_content">
+                    	<p>'.$instance['c_say'.$i.''].'</p>
+                    </div>
+                    <div class="quote_author heading_font">
+                        <img src="'.$instance['c_avatar'.$i.''].'"  alt="face">
+                        <div class="icon_testimonial">'.$instance['c_name'.$i.''].'</div>
+                        <span class="quote_author_description">'.$instance['c_position'.$i.''].'</span>
+                    </div>
+                </div>';
+            }
+            echo'</div>';
+        echo $after_widget;
+    }
+    //更新选项
+    function update( $instance, $old_instance ){
+        $instance['title'] = strip_tags( $instance['title'] );
+        $instance['c_name1'] = strip_tags( $instance['c_name1'] );
+        $instance['c_position1'] = strip_tags( $instance['c_position1'] );
+        $instance['c_avatar1'] = strip_tags( $instance['c_avatar1'] );
+        $instance['c_say1'] = strip_tags( $instance['c_say1'] );
+        $instance['c_name2'] = strip_tags( $instance['c_name2'] );
+        $instance['c_position2'] = strip_tags( $instance['c_position2'] );
+        $instance['c_avatar2'] = strip_tags( $instance['c_avatar2'] );
+        $instance['c_say2'] = strip_tags( $instance['c_say2'] );
+        $instance['c_name3'] = strip_tags( $instance['c_name3'] );
+        $instance['c_position3'] = strip_tags( $instance['c_position3'] );
+        $instance['c_avatar3'] = strip_tags( $instance['c_avatar3'] );
+        $instance['c_say3'] = strip_tags( $instance['c_say3'] );
+        return $instance;
+    }
+     //选项表单
+    function form( $instance ){
+        $instance = wp_parse_args( $instance, array(
+            'title' => __( '客户评价', 'Bing' ),
+            'c_name1' => '1',
+            'c_position1' => '1',
+            'c_avatar1' => '1',
+            'c_say1' => '1',
+            'c_name2' => '2',
+            'c_position2' => '1',
+            'c_avatar2' => '2',
+            'c_say2' => '2',
+            'c_name3' => '3',
+            'c_position3' => '1',
+            'c_avatar3' => '3',
+            'c_say3' => '3',
+        ) );
+        //设置表单
+        echo'
+        <p>
+            <label for="'.$this->get_field_id( 'title' ).'">◆工具标题：</label>
+            <input id="'.$this->get_field_id( 'title' ).'" name="'.$this->get_field_name( 'title' ).'" type="text" value="'.$instance['title'].'" />
+        </p>';
+        for($i=1;$i<4;$i++){
+             echo'
+             <p>
+                 <label for="'.$this->get_field_id( 'c_name'.$i.'' ).'">┏客户名称：</label>
+                 <input id="'.$this->get_field_id( 'c_name'.$i.'' ).'" name="'.$this->get_field_name( 'c_name'.$i.'' ).'" type="text" value="'.$instance['c_name'.$i.''].'" />
+             </p>
+             <p>
+                  <label for="'.$this->get_field_id( 'c_position'.$i.'' ).'">┠客户职位：</label>
+                  <input id="'.$this->get_field_id( 'c_position'.$i.'' ).'" name="'.$this->get_field_name( 'c_position'.$i.'' ).'" type="text" value="'.$instance['c_position'.$i.''].'" />
+             </p>
+             <p>
+                  <label for="'.$this->get_field_id( 'c_avatar'.$i.'' ).'">┠客户头像：</label>
+                  <input id="'.$this->get_field_id( 'c_avatar'.$i.'' ).'" name="'.$this->get_field_name( 'c_avatar'.$i.'' ).'" type="text" value="'.$instance['c_avatar'.$i.''].'" />
+             </p>
+             <p>
+                  <label for="'.$this->get_field_id( 'c_say'.$i.'' ).'">┗评价内容：</label>
+                  <input id="'.$this->get_field_id( 'c_say'.$i.'' ).'" name="'.$this->get_field_name( 'c_say'.$i.'' ).'" type="text" value="'.$instance['c_say'.$i.''].'" />
+             </p>';
+        }
+    }
+
+}
+register_widget('widget_client_say');
 
 ?>

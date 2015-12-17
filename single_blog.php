@@ -6,7 +6,7 @@
 		</div>
   		<div class="medium-7 columns">
   			<ul class="breadcrumbs text-right">
-			  <li><a href="#">首页b</a></li>
+			  <li><a href="/">首页</a></li>
 			  <li><?php the_category(' '); ?></li>
 			  <li class="current"><?php the_title(); ?></li>
 			</ul>
@@ -26,7 +26,6 @@
                 <div class="entry-content">
                     <?php the_content(); ?>
                 </div>
-
             </article>
             <div class="entry-author panel">
                 <div class="row">

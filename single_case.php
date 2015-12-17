@@ -1,4 +1,18 @@
 <?php get_header(); ?>
+<div class="full crumb">
+	<div class="row">
+		<div class="medium-5 columns">
+			<h1><?php the_title() ?></h1>
+		</div>
+  		<div class="medium-7 columns">
+  			<ul class="breadcrumbs text-right">
+			  <li><a href="#">首页</a></li>
+			  <li><?php the_category(' '); ?></li>
+			  <li class="current"><?php the_title(); ?></li>
+			</ul>
+  		</div>
+	</div>
+</div>
 <div class="row case-info">
 <!-- Row for main content area -->
 	<?php while (have_posts()) : the_post(); ?>

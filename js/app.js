@@ -139,6 +139,13 @@ jQuery(document).ready(function($) {
 			});
 		});
 	}
+	//clients say
+	if ($("#client-say").tc_doesExist()) {
+		$("#client-say").owlCarousel({
+			'items':1,
+			'dots':true
+		});
+	}
 	//back top
 	var $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
 			.attr("title", "返回顶部").click(function() {

@@ -1770,7 +1770,7 @@ a:hover .pic.img_hover_effect2 img {
     font-weight: 400;
 }
 
-.post-item .more-link:before {
+.more-link:before {
     content: "\f105";
     font-family: FontAwesome;
     font-size: 17px;
@@ -1783,13 +1783,13 @@ a:hover .pic.img_hover_effect2 img {
     width: 12px;
 }
 
-.post-item .more-link {
+.more-link {
     font-size: 13px;
     line-height: 22px;
     display: inline-block;
 }
 
-.post-item .more-link:hover {
+.more-link:hover {
     text-indent: 4px;
 }
 a .img_overlay {
@@ -2623,6 +2623,9 @@ a:hover .img_overlay .hover_icon {
 .single-post a:hover{
     color:#3185e7;
 }
+figure{
+    margin:0;
+}
 .post-content{
     margin-top:3rem;
 }
@@ -2667,6 +2670,131 @@ a:hover .img_overlay .hover_icon {
 .comments h3{
     color:#555555;
 }
+/*  #BOLG_LIST
+/* ======================= */
+.post_item .post_description img{
+    display:none;
+}
+.tagcloud {
+    padding: 0
+    0 10px;
+    overflow: hidden
+}
+
+.tagcloud
+a {
+    float: left;
+    font-size: 12px;
+    padding: 2px
+    12px;
+    color: #555;
+    text-shadow: 0 1px 0 rgba(255,255,255, 0.7);
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.02));
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.02));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.02));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.02));
+    background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.02));
+    margin: 0
+    8px 8px 0;
+    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+    border-radius: 4px
+}
+
+.tagcloud a:hover {
+    color: #fff !important;
+    text-shadow: none;
+    background-color: #08ada7;
+    border-bottom: 1px solid #d5d5d5;
+    border-bottom: 1px solid rgba(0,0,0,0.05)
+}
+
+.post_item {
+    border-bottom: 1px solid #f4f4f4;
+    margin-bottom: 30px;
+    padding-bottom: 20px
+}
+.post_item:last-child {
+    border-bottom: none
+}
+.post_list_left {
+    float: left;
+    text-align: center;
+    width: 44px;
+    margin-top: 28px
+}
+.day {
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.03));
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.03));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.03));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.03));
+    background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.03));
+    padding: 6px
+    4px;
+    font-size: 17px;
+    color: #727272;
+    -webkit-border-radius: 2px 2px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
+    border-bottom: 1px solid white
+}
+.month {
+    background-color: #3185e7;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.04));
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.04));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.04));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.04));
+    background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.04));
+    padding: 1px
+    4px 2px;
+    color: white;
+    font-size: 13px;
+    -webkit-border-radius: 0px 0px2px 2px;
+    border-radius: 0px 0px 2px 2px;
+    border-bottom: 1px solid rgba(0,0,0,0.08)
+}
+.post_list_right {
+    margin-left: 70px;
+    padding-top: 24px
+}
+.post_title {
+    margin: 0 0 6px;
+    line-height: 35px
+}
+.post_title a{
+    color:#444444;
+}
+.post_meta {
+    font-size: 12px;
+    line-height: 20px;
+    color: #999
+}
+.post_meta a, .post_content .post_meta a:not(.button) {
+    color: #888
+}
+.post_description {
+    margin: 13px 0 12px;
+    color:#666666;
+    font-size:0.9rem;
+    line-height:28px;
+}
+.post_description p{
+    font-size:0.9rem;
+    line-height:28px;
+}
+.post_description br{
+    display:none;
+}
+.post_item a:hover{
+    color:#3185e7;
+}
+
 
 /*  #SIDEBAR
 /* ======================= */
@@ -2807,10 +2935,88 @@ a:hover .hover_span {
     font-size: 11px;
     line-height: 15px;
 }
-
-
-
-
+.widget_search input{
+    border-color: #eeeeee;
+    box-shadow: none;
+    border-right:none;
+}
+.widget_search input:focus{
+    border-color:#3185e7;
+    background-color:#ffffff;
+}
+.widget_client_say .owl-item{
+    width:278px;
+}
+.widget_client_say .quote_content {
+    border: 1px solid #f2f2f2;
+    background: #f9f9f9 url('../img/quote.png') 14px 14px no-repeat;
+    position: relative;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -khtml-border-radius: 6px;
+    border-radius: 6px;
+    margin: 1px;
+}
+.quote_content:before,.quote_content:after {
+    left: 43px;
+    top: 100%;
+    border-style: solid;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+.quote_content:before{
+    border-color: rgba(242, 242, 242, 0);
+    border-top-color: #f2f2f2;
+    border-width: 7px;
+    margin-left: -7px;
+}
+.quote_content:after {
+    border-color: rgba(249, 249, 249, 0);
+    border-top-color: #f9f9f9;
+    border-width: 5px;
+    margin-left: -5px;
+}
+.quote_content p {
+    margin: 20px 20px 20px 46px;
+    font-size: 14px;
+    line-height: 24px;
+    font-style: italic;
+    color: #777;
+}
+.widget_client_say .quote_author {
+    left: 18px;
+    position: relative;
+    margin-top: 14px;
+}
+.widget_client_say img {
+    width: 52px !important;
+    height: 52px;
+    margin-top: 3px;
+    float: left;
+    border-radius: 60px;
+    margin-right: 12px;
+}
+.widget_client_say .icon_testimonial {
+    font-size: 14px;
+    padding-left: 22px;
+    padding-top: 8px;
+}
+.quote_author_description {
+    display: block;
+    color: #aaa;
+    font-style: italic;
+    text-transform: none;
+    margin-bottom: 2px;
+    font-size: 11px;
+    margin-top: 1px;
+}
+.widget_client_say .owl-dots{
+    text-align: center;
+    margin-top: 1rem;
+}
 
 
 
