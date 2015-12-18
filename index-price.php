@@ -1,12 +1,15 @@
 <div class="full-width-box price-table">
 	<div class="row">
+	    <?php if(!$columns) :?>
     	<div class="column">
-    		<div class="text-center widget-title wow fadeInLeft animated" data-wow-delay="0.6s">
+    	    <div class="text-center widget-title wow fadeInLeft animated" data-wow-delay="0.6s">
     			<h4>About Prices</h4>
 				<em class="text-uppercase inline-block">关于价格</em>
     		</div>
     		<div id="price" class="price-carousel push-top-40 wow fadeInRight animated" data-wow-delay="0.6s">
-				<div class="item">
+    		<?php endif;?>
+
+				<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-blue">
 		     				<h5>网站开发</h5>
@@ -27,7 +30,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-		     	<div class="item">
+		     	<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-pink">
 		     				<h5>网站开发</h5>
@@ -48,7 +51,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-		     	<div class="item">
+		     	<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-green">
 		     				<h5>WP主题定制</h5>
@@ -69,7 +72,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-		     	<div class="item">
+		     	<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-brown">
 		     				<h5>WP主题定制</h5>
@@ -90,7 +93,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-				<div class="item">
+				<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-grey">
 		     				<h5>模板定制</h5>
@@ -111,7 +114,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-		     	<div class="item">
+		     	<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-pink">
 		     				<h5>模板定制</h5>
@@ -132,7 +135,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-				<div class="item">
+				<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-yellow">
 		     				<h5>装修模板</h5>
@@ -153,7 +156,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-				<div class="item">
+				<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-red">
 		     				<h5>装修模板</h5>
@@ -174,7 +177,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-				<div class="item">
+				<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-brown">
 		     				<h5>装修包月</h5>
@@ -195,7 +198,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-				<div class="item">
+				<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-green">
 		     				<h5>装修包月</h5>
@@ -216,7 +219,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-		     	<div class="item">
+		     	<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-yellow">
 		     				<h5>商品详情</h5>
@@ -237,7 +240,7 @@
 		     			</div>
 		     		</div>
 		     	</div>
-				<div class="item">
+				<div class="<?php echo $columns; ?> item">
 		     		<div class="price-block b-shadow b-radius">
 		     			<div class="price-header bg-deepblue">
 		     				<h5>技术支持</h5>
@@ -258,7 +261,9 @@
 		     			</div>
 		     		</div>
 		     	</div>
+		    <?php if(!$columns) :?>
 	     	</div>
-     	</div>
+	    </div>
+     	<?php endif; ?>
     </div>
 </div>

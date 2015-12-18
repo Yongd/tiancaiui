@@ -150,6 +150,8 @@ if( ! function_exists( 'reverie_scripts_and_styles ' ) ) {
         wp_register_script( 'wow', '//cdn.bootcss.com/wow/1.1.2/wow.min.js', array(), '', true );
         // app for theme
         wp_register_script( 'app', 'http://127.0.0.1/wp-content/themes/reverie-master/js/app.js', array(), '', true );
+        // jquery validate
+        wp_register_script( 'validate', '//cdn.bootcss.com/jquery-validate/1.14.0/jquery.validate.min.js', array(), '', true );
 
 	    global $is_IE;
 	    if ($is_IE) {
@@ -172,13 +174,13 @@ if( ! function_exists( 'reverie_scripts_and_styles ' ) ) {
 	    wp_enqueue_script( 'html5shiv' );
 	    wp_enqueue_script( 'isotope' );
 	    wp_enqueue_script( 'owl-carousel' );
-        if( is_home() ){
-            wp_enqueue_script( 'waypoints' );
-            wp_enqueue_script( 'countTo' );
-        }
+        wp_enqueue_script( 'waypoints' );
+        wp_enqueue_script( 'countTo' );
         wp_enqueue_script( 'app' );
 
+
 	    if( is_singular() ) { wp_enqueue_script( 'magnific-pop' ); }
+	    if( is_page('contact') ) { wp_enqueue_script( 'validate' ); }
 
 	  }
 	}

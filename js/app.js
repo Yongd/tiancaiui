@@ -146,6 +146,10 @@ jQuery(document).ready(function($) {
 			'dots':true
 		});
 	}
+	//validate
+	if ($("#contactFormy").tc_doesExist()) {
+		$("#contactForm").validate();
+	}
 	//back top
 	var $backToTopEle = $('<div class="backToTop"></div>').appendTo($("body"))
 			.attr("title", "返回顶部").click(function() {
