@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="crumb" class="full crumb">
+<div id="crumb" class="full crumb wow fadeInDown animated">
 	<div class="row">
 		<div class="medium-5 columns">
 			<h1>作品展示</h1>

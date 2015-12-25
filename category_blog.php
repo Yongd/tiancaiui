@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="crumb" class="full crumb">
+<div id="crumb" class="full crumb wow fadeInDown animated">
 	<div class="row">
 		<div class="medium-5 columns">
 			<h1><?php single_tag_title(); ?></h1>
@@ -13,7 +13,7 @@
 	</div>
 </div>
 <div class="row post-content">
-    <div class="small-12 large-9 columns" id="content" role="main">
+    <div class="small-12 large-9 columns wow fadeInLeft animated" id="content" role="main">
         <?php while (have_posts()) : the_post(); ?>
             <div class="post_item section">
                 <div class="pic">
@@ -40,6 +40,12 @@
 				</div>
             </div>
         <?php endwhile; ?>
+        <?php if ( function_exists('reverie_pagination') ) { reverie_pagination(); } else if ( is_paged() ) { ?>
+        		<nav id="post-nav">
+        			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'reverie' ) ); ?></div>
+        			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'reverie' ) ); ?></div>
+        		</nav>
+        	<?php } ?>
     </div>
 	<?php get_sidebar(); ?>
 </div>

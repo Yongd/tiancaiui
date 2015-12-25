@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="full crumb">
+<div class="full crumb wow fadeInDown animated">
 	<div class="row">
 		<div class="medium-5 columns">
 			<h1><?php the_title() ?></h1>
@@ -14,7 +14,7 @@
 	</div>
 </div>
 <div class="row post-content">
-    <div class="small-12 large-9 columns" id="content" role="main">
+    <div class="small-12 large-9 columns wow fadeInLeft animated" id="content" role="main">
         <?php while (have_posts()) : the_post(); ?>
             <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
                 <p class="post_meta">

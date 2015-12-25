@@ -40,9 +40,9 @@
 									<div class="info_overlay">
 										<div class="info_overlay_padding">
 											<div class="info_desc">
-												<span class="portfolio_icon fa fa-<?php  echo get_project_tags( wp_get_post_tags($post->ID), 2 ) ; ?> fa-lg"></span>
+												<span class="portfolio_icon fa fa-<?php  echo get_project_tags( get_post_meta($post->ID, 'case_tags', true), 2 ) ; ?> fa-lg"></span>
 												<h3><?php the_title(); ?></h3>
-												<p><?php echo get_project_tags( wp_get_post_tags($post->ID), 1 ) ; ?></p>
+                                                <p><?php echo get_project_tags( get_post_meta($post->ID, 'case_tags', true), 1 ) ; ?></p>
 											</div>
 										</div>
 									</div>
@@ -53,9 +53,8 @@
 					<?php endwhile; wp_reset_query(); ?>
 				</div>
 				<div class="push-top-40 text-center">
-					<a href="" class="button radius morecase" target="_self"><span>所有作品</span><i class="fa fa-angle-right"></i> </a>
+					<a href="/category/caseshow" class="button radius morecase" target="_self"><span>所有作品</span><i class="fa fa-angle-right"></i> </a>
 				</div>
-
-			</div>
+            </div>
 		</div>
 	</div>

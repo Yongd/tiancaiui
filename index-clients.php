@@ -13,7 +13,7 @@
         foreach ($clients as $client){
             echo'
                 <div class="medium-2 columns wow fadeInUp animated" data-wow-delay="'.$i*0.3.'s">
-                    <a href="'.$client->link_url.'" rel="nofollow" title="'.$client->link_name.'" style="background-image: url('.$client->link_image.')"></a>
+                    <a href="'.$client->link_url.'" rel="nofollow" title="'.$client->link_name.'" target="_blank"><img src="'.$client->link_image.'"></a>
                 </div>';
             $i++;
         }
@@ -27,12 +27,12 @@
 			<p>我们期待为您提供服务.</p>
 		</div>
 		<div class="button-group push-top-40">
-			<a class="button gray wow fadeInLeft animated" href="#">
+			<a class="button gray wow fadeInLeft animated" href="/contact">
 				<span class="title">Contact us</span>
 				<span class="subtitle">给我们发邮件</span>
 			</a> 
 			<span class="or">or</span> 
-			<a class="button color wow fadeInRight animated" href="#">
+			<a class="button color wow fadeInRight animated" href="/category/caseshow">
 				<span class="title">View our portfolio</span>
 				<span class="subtitle">查看我们的作品</span>
 			</a>

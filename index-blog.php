@@ -10,7 +10,7 @@
 						<div class="owl-item">
 							<div class="post-item">
 								<div class="pic img_hover_effect2">
-									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo catch_that_image(); ?>">
+									<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo catch_that_image(); ?>-blogshow">
 									<div class="img_overlay"><span class="hover_icon fa fa-plus"></span></div>
 									</a>
 								</div>

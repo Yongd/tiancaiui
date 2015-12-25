@@ -97,11 +97,13 @@ jQuery(document).ready(function($) {
 				0:{
 					items:1,
 				},
-				480:{
-					items:1,
-					margin:20,
+				620:{
+					items:2
 				},
-				768:{
+				920:{
+					items:3
+				},
+				1280:{
 					items:4
 				}
 			}
@@ -112,7 +114,21 @@ jQuery(document).ready(function($) {
 		$("#price").owlCarousel({
 			'items':4,
 			'margin':26,
-			'dots':true
+			'dots':true,
+			'responsive':{
+				0:{
+					items:1,
+				},
+				400:{
+					items:2
+				},
+				620:{
+					items:3
+				},
+				800:{
+					items:4
+				}
+			}
 		});
 	}
 	//case-info picture popup
@@ -161,12 +177,6 @@ jQuery(document).ready(function($) {
 	$(window).bind("scroll", $backToTop);
 });
 
-jQuery(window).load(function() {
-	jQuery(function($) {
-
-	})
-
-});
 //element fixed
 function fixed(e,t,c){
 	( jQuery(document).scrollTop()>t ) ? e.addClass(c) :'';

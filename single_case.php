@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div class="full crumb">
+<div class="full crumb wow fadeInDown animated">
 	<div class="row">
 		<div class="medium-5 columns">
 			<h1><?php the_title() ?></h1>
@@ -43,7 +43,7 @@
 					</ul>
 				</div>
 				<?php $url = get_post_meta($post->ID, 'project_url', true) ; if( $url ) { ?>
-					<a href="<?php echo $url; ?>" class="button tiny radius" target="_blank" rel="nofollow"><span>浏览网站</span><i class="fa fa-external-link"></i> </a>
+					<a href="<?php echo $url; ?>" class="button-go tiny radius" target="_blank" rel="nofollow"><span>浏览网站</span><i class="fa fa-external-link"></i> </a>
 				<?php } ?>
 			</div>
 		</div>

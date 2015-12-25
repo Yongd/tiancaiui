@@ -43,12 +43,13 @@ require_once('lib/presstrends.php'); // load PressTrends to track the usage of R
 
 /*case-show*/
 function get_project_tags( $tags, $type ){
+    $tags  = explode(",",$tags);
     if( $type==1 ) {//作品分类展示
         for($i=1;$i<count($tags);$i++){
-            $output .= ($i==count($tags)-1) ? $tags[$i]->name : $tags[$i]->name.' / ';
+            $output .= ($i==count($tags)-1) ? $tags[$i] : $tags[$i].' / ';
         }
     }else{
-        $output = $tags[0]->name;
+        $output = $tags[0];
     }
     return $output;
 }
@@ -122,7 +123,7 @@ $sidebars = array('Sidebar');
 foreach ($sidebars as $sidebar) {
     register_sidebar(array('name'=> $sidebar,
     	'id' => 'Sidebar',
-        'before_widget' => '<article id="%1$s" class="widget %2$s">',
+        'before_widget' => '<article id="%1$s" class="wow fadeInRight animated widget %2$s">',
         'after_widget' => '</article>',
         'before_title' => '<h4><span>',
         'after_title' => '</span></h4>'
@@ -266,5 +267,7 @@ class widget_client_say extends WP_Widget{
 
 }
 register_widget('widget_client_say');
+//禁止代码标点转换
+remove_filter('the_content', 'wptexturize');
 
 ?>

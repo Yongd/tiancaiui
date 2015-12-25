@@ -17,6 +17,8 @@ if( ! function_exists( 'tc_enqueue_style' ) ) {
 		wp_register_style( 'animate', '//cdn.bootcss.com/animate.css/3.4.0/animate.min.css', array(), '', 'all' );
 		// Magnific Pop
 		wp_register_style( 'magnific-popup', get_stylesheet_directory_uri() . '/css/magnific-popup.min.css', array(), '', 'all' );
+		// Highlight
+        wp_register_style( 'highlight', get_stylesheet_directory_uri() . '/css/highlight.css', array(), '', 'all' );
 		
 		wp_enqueue_style( 'foundation-stylesheet' );
 		wp_enqueue_style( 'stylesheet' );
@@ -24,6 +26,7 @@ if( ! function_exists( 'tc_enqueue_style' ) ) {
 		wp_enqueue_style( 'owl-carousel' );
 		wp_enqueue_style( 'animate' );
 		if( is_singular() ) wp_enqueue_style( 'magnific-popup' );
+		if( is_singular() ) wp_enqueue_style( 'highlight' );
 		
 	}
 }

@@ -15,12 +15,12 @@
             <span>常用导航</span>
             <div class="menu-footer-menu-container">
                 <ul>
-                    <li><a href="">网站首页</a></li>
-                    <li><a href="">关于我们</a></li>
-                    <li><a href="">我们的服务</a></li>
-                    <li><a href="">案例展示</a></li>
-                    <li><a href="http://blueowlcreative.com/wp/fortuna/blog/">博客文章</a></li>
-                    <li><a href="http://blueowlcreative.com/wp/fortuna/contact/">联系我们</a></li>
+                    <li><a href="/">网站首页</a></li>
+                    <li><a href="/about">关于我们</a></li>
+                    <li><a href="/service">我们的服务</a></li>
+                    <li><a href="/category/caseshow">案例展示</a></li>
+                    <li><a href="/category/blog">博客文章</a></li>
+                    <li><a href="/contact">联系我们</a></li>
                 </ul>
             </div>
         </div>
@@ -30,12 +30,12 @@
             <?php query_posts('cat=33&showposts=2'); ?>
                 <?php while (have_posts()) : the_post(); ?>
                     <div class="latest-posts">
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo catch_that_image(); ?>"></a>
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo catch_that_image(); ?>-latest60"></a>
                         <p class="latest-posts-title">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </p>
                         <p class="date">
-                            <?php echo date('F',get_the_time('U')); the_time(' d, Y'); ?>
+                            <?php echo get_the_date(); ?>
                         </p>
                     </div>
             <?php endwhile; wp_reset_query(); ?>
